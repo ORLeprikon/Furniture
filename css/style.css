@@ -1,0 +1,513 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Federo", sans-serif;
+  font-family: "Open Sans", sans-serif;
+}
+
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 0 70px 0;
+}
+.header__nav ul {
+  list-style: none;
+  display: flex;
+}
+.header__nav ul li {
+  padding-bottom: 5px;
+}
+.header__nav ul li:not(:last-child) {
+  margin-right: 40px;
+}
+.header__nav ul a {
+  color: #697390;
+  font-size: 16px;
+  transition: all ease 0.2s;
+}
+.header__nav ul a:hover {
+  display: block;
+  color: #000000;
+}
+.header__menu button:not(:last-child) {
+  margin-right: 37px;
+}
+.header__menu img {
+  width: 25px;
+  height: 25px;
+}
+
+.hero {
+  position: relative;
+}
+.hero .slider__next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -90px;
+}
+.hero .slider__prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -90px;
+}
+.hero::after {
+  position: absolute;
+  background: #F6F6F6;
+  z-index: -1;
+  background-size: 100%;
+  height: 500px;
+  left: 40%;
+  top: 300px;
+  content: "";
+  display: block;
+}
+.hero .slide {
+  display: flex;
+  position: relative;
+  grid-gap: 90px;
+}
+.hero .slide .slide__img {
+  width: 60%;
+}
+.hero .slide .slide__img img {
+  width: 620px;
+  height: 450px;
+  object-fit: cover;
+  border: none;
+}
+.hero .slide .slide__content {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.hero .slide .slide__content .content__title {
+  font-family: "Federo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 50px;
+  color: #3A3A3A;
+  width: 385px;
+  height: 120px;
+  padding-bottom: 25px;
+  line-height: 60px;
+  font-size: 50px;
+}
+.hero .slide .slide__content button {
+  width: 122px;
+  padding: 8px 16px;
+  text-align: center;
+  background: #434343;
+}
+.hero .slide .slide__content button a {
+  font-size: 16px;
+  line-height: 22px;
+  color: #fff;
+}
+
+.bestseller {
+  padding-top: 84px;
+}
+.bestseller__title {
+  text-align: center;
+  padding-bottom: 45px;
+  font-family: "Federo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 50px;
+  color: #3A3A3A;
+}
+.bestseller__list-container {
+  display: flex;
+  height: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.bestseller__list-item {
+  width: 255px;
+  border: 0.5px solid #E2E0DB;
+  margin-bottom: 30px;
+  position: relative;
+  text-align: center;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bestseller__list-item .item__sale {
+  position: absolute;
+  margin-left: auto;
+  top: 12px;
+  right: 0;
+  text-align: center;
+}
+.bestseller__list-item .item__sale-hot {
+  width: 75px;
+  height: 22px;
+  background: #F29731;
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 5px;
+  padding: 6px 0;
+}
+.bestseller__list-item .item__sale-discount {
+  width: 75px;
+  height: 22px;
+  background: #9E0B0F;
+  color: #fff;
+  font-size: 16px;
+  padding: 6px 0;
+}
+.bestseller__list-item .item__content {
+  padding-top: 71px;
+  width: 100%;
+  max-width: 180px;
+  margin: 0 auto;
+}
+.bestseller__list-item .item__content-img-container {
+  width: 180px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bestseller__list-item .item__content h3 {
+  font-weight: 400;
+  font-size: 16px;
+  color: #2A2A2B;
+  margin-bottom: 10px;
+  padding-top: 30px;
+}
+.bestseller__list-item .item__content p {
+  font-weight: 400;
+  font-size: 14px;
+  color: #8C8C8C;
+  font-family: "Federo", sans-serif;
+  margin-bottom: 25px;
+}
+.bestseller__list-item .item__menu {
+  position: absolute;
+  width: 30px;
+  top: 170px;
+  right: 0;
+  padding-right: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.bestseller__list-item .item__menu .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 27px;
+  height: 27px;
+}
+.bestseller__list-item .item__menu .menu:not(:last-child) {
+  margin-bottom: 5px;
+}
+.bestseller__list-item .item__menu button {
+  border: 0.5px solid #E2E0DB;
+}
+.bestseller__list-item .item__menu button:hover {
+  background: #dad7d7;
+  transition-duration: 0.4s;
+}
+.bestseller__list-item:nth-child(5) {
+  width: 350px;
+}
+.bestseller__list-item:nth-child(6) {
+  width: 350px;
+}
+.bestseller__list-item:nth-child(7) {
+  width: 350px;
+}
+
+.deal {
+  background-image: url(../img/testBGR.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 50vw;
+}
+.deal .deal__item {
+  width: 1100px;
+  height: 570px;
+  margin-top: 150px;
+  background: #F7F7F7;
+  border-radius: 377px 0px 0px 377px;
+  margin-bottom: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.deal .deal__item .item {
+  display: flex;
+  padding: 47px 35px;
+}
+.deal .deal__item .item__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 100%;
+  padding: 100px 50px;
+}
+.deal .deal__item .item__inf {
+  padding-left: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.deal .deal__item .item__inf h2 {
+  color: #3A3A3A;
+  font-size: 45px;
+  line-height: 50px;
+  font-family: "Federo", sans-serif;
+  margin-bottom: 20px;
+}
+.deal .deal__item .item__inf h2 span {
+  color: #78A2CA;
+}
+.deal .deal__item .item__inf p {
+  width: 401px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 26px;
+  color: #727272;
+  margin-bottom: 28px;
+}
+.deal .deal__item .item__inf button {
+  width: 132px;
+  height: 38px;
+  background: #434343;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 25px;
+}
+.deal .deal__item .item__inf .inf__title {
+  width: 200px;
+  background: #8096BC;
+  text-align: center;
+  padding: 8px 0;
+  margin-bottom: 40px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #fff;
+}
+.deal .deal__item .item__inf .inf__img {
+  width: 100%;
+  display: flex;
+  grid-gap: 20px;
+}
+.deal .deal__item .item__inf .inf__img img {
+  flex: 1 1 auto;
+}
+
+.trending__slider {
+  margin-top: 140px;
+  text-align: center;
+}
+.trending__slider .slider__title {
+  font-family: "Federo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 50px;
+  color: #3A3A3A;
+  padding-bottom: 78px;
+}
+.trending__slider .slider__nav {
+  position: relative;
+  margin-bottom: 150px;
+}
+.trending__slider .slider__nav .dropdown {
+  display: flex;
+  border: 0.5px solid #E2E0DB;
+}
+.trending__slider .slider__nav .dropdown .dropbtn {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px 0;
+}
+.trending__slider .slider__nav .dropdown .dropbtn img {
+  padding: auto;
+}
+.trending__slider .slider__nav .dropdown .dropbtn p {
+  color: #505050;
+  font-size: 14px;
+  line-height: 19px;
+}
+.trending__slider .slider__nav .dropdown .dropbtn:hover {
+  background: #FBF9F3;
+}
+.trending__slider .slider__nav .dropdown .dropbtn.slick-current {
+  background: #FBF9F3;
+}
+.trending__slider .slider__nav .slider__next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -90px;
+}
+.trending__slider .slider__nav .slider__prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -90px;
+}
+.trending__slider .slider__nav .dropdown__content {
+  padding-top: 20px;
+}
+.trending__slider .slider__nav .dropdown__content .content {
+  display: flex;
+  justify-content: space-between;
+}
+.trending__slider .slider__nav .dropdown__content .content .bestseller__list-item {
+  border: 0.5px solid #E2E0DB;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  height: 560px;
+  display: block;
+  background: url(../img/FotterBGR.png) no-repeat;
+  background-image: cover;
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+}
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer .container__tittle {
+  margin-bottom: 45px;
+}
+.footer .container__nav {
+  display: flex;
+  width: 100%;
+  padding-bottom: 140px;
+}
+.footer .container__nav li:first-child {
+  color: #000000;
+  font-size: 24px;
+  line-height: 224.68%;
+}
+.footer .container__nav a {
+  font-size: 20px;
+  line-height: 224.68%;
+  text-decoration: none;
+  color: #8A8A8A;
+}
+.footer .container__nav a:hover {
+  color: #000000;
+}
+.footer .container__nav-left {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin-right: 240px;
+}
+.footer .container__nav-right {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+.footer .container__nav-right:last-child li {
+  display: flex;
+  align-items: center;
+  padding-bottom: 5px;
+}
+.footer .container__nav-right:last-child img {
+  margin-right: 20px;
+}
+.footer .container__nav-right:last-child a:hover {
+  border: none;
+  padding-bottom: 0;
+}
+.footer__add {
+  width: 100%;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+.footer__add p {
+  padding: 10px 0;
+  margin: 0;
+  color: #7A7A7A;
+  font-size: 16px;
+}
